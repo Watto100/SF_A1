@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,24 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  apiurl = "http://localhost:3000/user";
+  
+  GetAll(){
+    return this.http.get(this.apiurl);
+  }
+
+  GetByCode(code: any){
+    return this.http.get(this.apiurl + '/' + code);
+  }
+
+  Proceedregistration(inputdata: any){
+    return this.http.post(this.apiurl, inputdata);
+  }
+
+  UpdateUser(code: any, inputdata: any){
+    return this.http.put(this.apiurl + '/' + code, inputdata);
+  }
+
 }
