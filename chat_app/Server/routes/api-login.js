@@ -15,7 +15,7 @@ module.exports = function (app,path,fs) {
                 //console.log(data);
               let users = JSON.parse(data);
               //console.log(users);
-              users = users.users;
+              users = users.user;
               
               
     
@@ -23,8 +23,6 @@ module.exports = function (app,path,fs) {
     
             
             customer.id=0;
-            customer.email = '';
-            customer.username = '';
     
             for (let i = 0; i < users.length; i++) {
                 if (req.body.email == users[i].email && req.body.upwd == users[i].pwd) {
@@ -44,11 +42,6 @@ module.exports = function (app,path,fs) {
             }
               
            })
-          //  {"people": [
-          //   { "email": "abc@com.au", "pwd": "123", "id": 1, "username": "allan","avatar":"" },
-          //   { "email": "abd@com.au", "pwd": "123", "id": 2, "username": "Jodi" ,"avatar":""},
-          //  { "email": "abe@com.au", "pwd": "123", "id": 3, "username": "Sarah" ,"avatar":""}]}
-       
 
     });
 }
