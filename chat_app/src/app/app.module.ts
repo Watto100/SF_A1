@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { RegistreComponent } from './registre/registre.component';
 import { LoginComponent } from './login/login.component';
+import { GroupPageComponent } from './group-page/group-page.component';
 
 
 
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     RegistreComponent,
     LoginComponent,
-    RegistreComponent
+    RegistreComponent,
+    GroupPageComponent
 
   ],
   imports: [
