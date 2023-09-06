@@ -27,12 +27,12 @@ app.use(cors({
 }));
 
 
-app.get('/', (req, res) => {
-    res.send([{message: 'hello wolrd'}]);
-})
+// app.get('/', (req, res) => {
+//     res.send([{message: 'hello wolrd'}]);
+// })
 
 
-// require('./routes/api-login.js')(app,path,fs);
+require('./routes/api-login.js')(app,path,fs);
 
 
 
