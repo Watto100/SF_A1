@@ -4,6 +4,20 @@
     width: 100%;
   }
   
-  .example-full-width {
-    width: 100%;
-  }
+.example-full-width {
+  width: 100%;
+}
+
+#body{
+  background-color: aquamarine;
+  width: auto;
+}
+
+#main {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  transform: translate(70%, 50%);
+  background-color: antiquewhite;
+  width: fit-content;
+}

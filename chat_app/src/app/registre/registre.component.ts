@@ -27,15 +27,15 @@ export class RegistreComponent {
 
   proceedRegistration(){
 
-    // if(this.registerform.valid){
-    //   this.service.Proceedregistration(this.registerform.value).subscribe(res => {
-    //     this.toastr.success('Registration Successful');
-    //     this.router.navigate(['login']);
-    //   });
-    if(true){
+    if(this.registerform.valid){
+      this.service.Proceedregistration(this.registerform.value).subscribe(res => {
+        this.toastr.success('Registration Successful');
+        this.router.navigate(['login']);
+      });
+    // if(true){
 
-      this.toastr.success('Registration Successful');
-      this.router.navigate(['login']);
+    //   this.toastr.success('Registration Successful');
+    //   this.router.navigate(['login']);
     }else{
       this.toastr.warning('Form not valid');
     }

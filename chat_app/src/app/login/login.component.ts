@@ -26,21 +26,21 @@ export class LoginComponent {
 
   proceedLogin(){
 
-    // this.service.GetByCode(this.loginform.value.username).subscribe(res => {
-    //   this.userdata=res
-    //   if(this.userdata.password === this.loginform.value.password){
-    //     sessionStorage.setItem('username', this.userdata.id);
-    //     sessionStorage.setItem('userrole', this.userdata.role);
-    //     this.router.navigate(['']);
+    this.service.GetByCode(this.loginform.value.username).subscribe(res => {
+      this.userdata=res
+      if(this.userdata.password === this.loginform.value.password){
+        sessionStorage.setItem('username', this.userdata.id);
+        sessionStorage.setItem('userrole', this.userdata.role);
+        this.router.navigate(['']);
 
-    //   }else{
-    //     this.toastr.error("Invalid Creditals");
-    //   }
+      }else{
+        this.toastr.error("Invalid Creditals");
+      }
 
-    // });
-    sessionStorage.setItem('username', 'admin');
-    sessionStorage.setItem('userrole', 'admin');
-    this.router.navigate(['']);
+    });
+    // sessionStorage.setItem('username', 'admin');
+    // sessionStorage.setItem('userrole', 'admin');
+    // this.router.navigate(['']);
 
   }
 

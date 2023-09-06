@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class GroupPageComponent {
 
+  groups = ["group 1", "group 2", "group 3"]
+
 }

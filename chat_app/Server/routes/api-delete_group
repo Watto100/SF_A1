@@ -1,0 +1,18 @@
+module.exports = function (app,path,fs) {
+    //Route to manage user logins
+
+
+    app.post('/api/delete_group', function (req, res) {
+        if (!req.body) {
+            return res.sendStatus(400)
+        }
+        const data = fs.readFileSync('/json/groups.json');
+
+        const jsonData = JSON.parse(data);
+
+        delete jsonData.group.name
+
+        fs.writeFileSync('data.json', JSON.stringify(jsonData));
+
+    });
+}
