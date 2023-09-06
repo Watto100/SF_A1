@@ -1,1 +1,29 @@
-<p>registre works!</p>
+<mat-card>
+    <mat-card-header>User Register</mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedRegistration()">
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="Name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button colour="primary">Submit</button>
+                <a routerLink="/login" mat-raised-button colour="accesnt">Back to login</a>
+            </div>
+        
+        </form>
+    </mat-card-content>
+</mat-card>

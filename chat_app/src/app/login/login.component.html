@@ -1,1 +1,21 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-header>Login</mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="loginform" (ngSubmit)="proceedLogin()">
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button colour="primary">Submit</button>
+                <a routerLink="/register" mat-raised-button colour="accesnt">Register</a>
+            </div>
+        
+        </form>
+    </mat-card-content>
+</mat-card>
